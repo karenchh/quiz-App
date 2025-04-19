@@ -11,15 +11,17 @@
         <div class="login-container">
             <div class="inner-container">
             <button class="login">Login Here</button>
-            <form class="login-form">
-                <input type="email" name="useremail" placeholder="Enter your email">
-                <input type="password" name="userpassword" placeholder="Enter your password">
+            <form class="login-form" id="form-login">
+                <input type="email" name="useremail" id="login-email" placeholder="Enter your email">
+                <input type="password" name="userpassword"id="login-password" placeholder="Enter your password">
                 <button type="submit" class="login-btn">Login</button>
             </form>
             <p class="par1">Don't have an account?<br/>
             <a href="./Signup.html">Sign up</a> here</p>
+            <p id="login-message"></p>
             </div>
         </div>
     </div>
+    <script src="../scripts/scripts.js"></script>
 </body>
 </html>
