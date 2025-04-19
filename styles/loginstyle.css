@@ -7,20 +7,36 @@ body{
     height:100vh;
     display:flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    background: linear-gradient(to top, rgb(0,0,0,0.5)50%, rgb(0,0,0,0.5)50%), url("../assets/quizlogin.PNG");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
 }
 .login-container{
     width: 400px;
-    height: 350px;
+    height: 440px;
+    margin-left: 145px;
     display:flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content:center;
     align-items: center;
-    background-color:blanchedalmond;
+    background: linear-gradient(to top, rgba(6, 6, 11, 0.553)50%, rgba(6, 6, 11, 0.553)50%);
 }
 .login-form{
     display:flex;
     flex-direction:column;
     width:200px;
     height: 100px;
+}
+.login{
+    background-color: rgb(255, 255, 255);
+    color:rgb(44, 135, 181);
+    font-size: 20px;
+    width:80px;
+}
+.par1{
+    color:white;
+    text-align: center;
 }
