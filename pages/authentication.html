@@ -8,9 +8,11 @@
 <body>
     <div class="login-container">
         <h2>Login</h2>
-        <input class="email" type="email" name="useremail" placeholder="Enter your email">
-        <input class="pass" type="password" name="userpassword" placeholder="Enter your password">
-        <button class="login-btn"><a href="#">Login</a></button>
+        <form class="login-form">
+            <label>Email<input class="email" type="email" name="useremail"></label>
+            <label>Password<input class="pass" type="password" name="userpassword"></label>
+            <input type="submit" class="login-btn" value="Login">
+        </form>
     </div>
 </body>
 </html>
