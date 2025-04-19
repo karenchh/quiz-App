@@ -1,3 +1,7 @@
 
 const loginForm = document.getElementById("form-login");
-console.log(loginForm);
+loginForm.addEventListener("submit", loginfunction)
+
+function loginfunction(event){
+
+}
