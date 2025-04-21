@@ -67,4 +67,12 @@ const quizzes = [
     //Create quizdescription paragraph for each and retrieve the description from the localstorage
     const quizdescription = document.createElement('p');
     quizdescription.textContent = quiz.description;
+
+    // Create quiz button
+    const quizbutton = document.createElement('a');
+    quizbutton.href = quiz.button.link;
+    const button = document.createElement('button');
+    button.textContent = quiz.button.text;
+    quizbutton.appendChild(button);
+
     }
