@@ -60,7 +60,11 @@ const quizzes = [
     quizdiv.classList.add('quiz');
     quizdiv.id = `quiz-n${i + 1}`;
 
-    //Create a quiztitle for each and retrieve the title from the localstorage then add it in the html file
+    //Create a quiztitle for each and retrieve the title from the localstorage then add it as a text inside the quiztitle div
     const quiztitle = document.createElement('div');
     quiztitle.textContent = quiz.title;
+
+    //Create quizdescription paragraph for each and retrieve the description from the localstorage
+    const quizdescription = document.createElement('p');
+    quizdescription.textContent = quiz.description;
     }
