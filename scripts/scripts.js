@@ -135,3 +135,6 @@ const quizzes = [
         }
     }
   ];
+
+  localStorage.setItem('quizzes', JSON.stringify(quizzes));
+  
