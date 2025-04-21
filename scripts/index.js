@@ -50,7 +50,7 @@ const quizzes = [
         }
     }
   ];
-
+  const quizcontainer = document.getElementById("quiz-list").value;
   localStorage.setItem('quizzes', JSON.stringify(quizzes));
   for (let i = 0; i < quizzes.length; i++) {
     const quiz = quizzes[i]; // save each quiz in quiz variable
@@ -75,4 +75,12 @@ const quizzes = [
     button.textContent = quiz.button.text;
     quizbutton.appendChild(button);
 
-    }
+    quizdiv.appendChild(quiztitle);
+    quizdiv.appendChild(quizdescription);
+    quizdiv.appendChild(quizbutton);
+
+    // Add quiz card to container
+    quizlist.appendChild(quizdiv);
+  }
+
+    
