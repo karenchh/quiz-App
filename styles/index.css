@@ -108,3 +108,7 @@ button{
     height:20px;
     background-color: paleturquoise;
 }
+.logout{
+    width:100px;
+    height: 40px;
+}

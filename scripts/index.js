@@ -87,3 +87,16 @@ const quizzes = [
   }
 }
 document.addEventListener("DOMContentLoaded", loadQuizzes);
+
+
+// Find the log-out button
+const logoutBtn = document.getElementById("logoutBtn");
+
+// Add click event listener for log out
+logoutBtn.addEventListener("click", () => {
+    // Remove the logged-in user from localStorage
+    localStorage.removeItem("loggedinuser");
+
+    // Redirect to the login page
+    window.location.href = '../pages/authentication.html';  // Change this path to your login page
+});

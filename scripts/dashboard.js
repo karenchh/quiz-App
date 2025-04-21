@@ -4,7 +4,7 @@ if (!loggedInUser || loggedInUser.email !== "admin@quiz.com") {
   window.location.href = "../pages/authentication.html";
 }
 const users = JSON.parse(localStorage.getItem("users")) || [];
-const tableBody = document.getElementById("users-tbody");
+const tableBody = document.getElementById("userstbody");
 
 
 for (let i = 0; i < users.length; i++) {
