@@ -14,9 +14,14 @@ body {
     padding: 100px 400px 100px 70px;
 
 }
-.current-quiz{
+.outer-container{
     width: 700px;
     height:550px;
     border-radius: 30px;
     background: linear-gradient(to top, rgba(83, 186, 207, 0.553)90%, rgba(83, 186, 207, 0.553)90%);
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    font-size: 30px;
+    font-weight:bold;
 }

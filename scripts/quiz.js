@@ -122,4 +122,11 @@ localStorage.setItem("quizn6", JSON.stringify(quiz6));
 const quiznumber = new URLSearchParams(window.location.search); // to bring it from the url
 const quizid = quiznumber.get("id");
 //console.log(quizid);
+const quizData = JSON.parse(localStorage.getItem(quizid));
+if (!quizData) {
+    document.getElementById("quizcontainer").textContent = "Quiz not found! You must log in first";
+    document.getElementById("submitBtn").style.display = "none";
+}
 
+
+const quizContainer = document.getElementById("quizcontainer");
