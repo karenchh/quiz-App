@@ -99,7 +99,15 @@ const quizzes = [
     description: 'Interactive web scripting language',
     button: {
       text: 'Quiz',
-      link: './pages/quiz.html?id=quiz-n2'
+      link: '../pages/quiz.html?id=quiz-n2'
       }
     }
+    ,{
+        title: 'Python',
+        description: 'Easy, versatile coding language',
+        button: {
+          text: 'Quiz',
+          link: '../pages/quiz.html?id=quiz-n3'
+        }
+      },
   ];
