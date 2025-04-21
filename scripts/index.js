@@ -54,5 +54,8 @@ const quizzes = [
   localStorage.setItem('quizzes', JSON.stringify(quizzes));
   for (let i = 0; i < quizzes.length; i++) {
     const quiz = quizzes[i]; // save each quiz in quiz variable
-
+    //Create a quizdev for each and assigning to it the class="quiz" and id="quiz-n(i+1)"
+    const quizdiv = document.createElement('div');
+    quizdiv.classList.add('quiz');
+    quizdiv.id = `quiz-n${i + 1}`;
     }
