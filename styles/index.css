@@ -41,10 +41,11 @@ body {
     flex-direction: column; /* Changed to stack rows vertically */
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 20px;
     color: rgb(2, 2, 83);
     background: linear-gradient(to top, rgba(83, 186, 207, 0.553)50%, rgba(83, 186, 207, 0.553)50%);
-    width: 520px;
+    width: 540px;
     height:450px;
     border-radius: 15px;
     padding: 20px;

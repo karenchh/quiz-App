@@ -1,4 +1,5 @@
 
+function loadQuizzes() {
 //index javascript
 const quizzes = [
     {
@@ -50,7 +51,8 @@ const quizzes = [
         }
     }
   ];
-  const quizcontainer = document.getElementById("quiz-list").value;
+  
+  const quizcontainer = document.getElementById("quizlist").value;
   localStorage.setItem('quizzes', JSON.stringify(quizzes));
   for (let i = 0; i < quizzes.length; i++) {
     const quiz = quizzes[i]; // save each quiz in quiz variable
@@ -81,6 +83,6 @@ const quizzes = [
 
     // Add quiz div to container
     quizlist.appendChild(quizdiv);
-  }
 
-    
+  }
+}

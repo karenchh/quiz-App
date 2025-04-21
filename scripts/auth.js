@@ -41,6 +41,8 @@ function loginfunction(event){
             userFound = true;
             if (users[i].password === password) {
                 alert("Log in success");
+                const loggedinuser = users[i].email;
+                localStorage.setItem("loggedinuser", JSON.stringify(loggedinuser));
                 window.location.href = '../index.html'; // redirect to home page
                 return;
             } else {
