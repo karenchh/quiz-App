@@ -52,7 +52,7 @@ const quizzes = [
     }
   ];
   
-  const quizcontainer = document.getElementById("quizlist").value;
+  const quizcontainer = document.getElementById("quizlist");
   localStorage.setItem('quizzes', JSON.stringify(quizzes));
   for (let i = 0; i < quizzes.length; i++) {
     const quiz = quizzes[i]; // save each quiz in quiz variable
@@ -82,7 +82,8 @@ const quizzes = [
     quizdiv.appendChild(quizbutton);
 
     // Add quiz div to container
-    quizlist.appendChild(quizdiv);
+    quizcontainer.appendChild(quizdiv);
 
   }
 }
+document.addEventListener("DOMContentLoaded", loadQuizzes);
