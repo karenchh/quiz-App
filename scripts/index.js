@@ -60,7 +60,7 @@ const quizzes = [
     //Create a quizdev for each and assigning to it the class="quiz" and id="quiz-n(i+1)"
     const quizdiv = document.createElement('div');
     quizdiv.classList.add('quiz');
-    quizdiv.id = `quiz-n${i + 1}`;
+    quizdiv.id = `quizn${i + 1}`;
 
     //Create a quiztitle for each and retrieve the title from the localstorage then add it as a text inside the quiztitle div
     const quiztitle = document.createElement('div');
