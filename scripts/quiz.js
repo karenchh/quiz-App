@@ -81,7 +81,25 @@ const quiz4 = [
   ];
 localStorage.setItem("quizn4", JSON.stringify(quiz4));
 
-
+const quiz5 = [
+    {
+      question: "What does CSS stand for?",
+      options: ["Computer Style Sheets", "Cascading Style Sheets", "Creative Style Syntax"],
+      correctAnswer: "Cascading Style Sheets"
+    },
+    {
+      question: "Which CSS property changes the background color?",
+      options: ["color", "background", "background-color"],
+      correctAnswer: "background-color"
+    },
+    {
+      question: "Which symbol is used to select a class in CSS?",
+      options: [".", "#", "@"],
+      correctAnswer: "."
+    }
+  ];
+localStorage.setItem("quizn5", JSON.stringify(quiz5));
+  
 
 const quiznumber = new URLSearchParams(window.location.search); // to bring it from the url
 const quizid = quiznumber.get("id");
