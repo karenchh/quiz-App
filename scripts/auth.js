@@ -1,87 +1,100 @@
-const admin = {
-    "email":"admin@quiz.com",
-    "password" : "admin123"
+// Initialize Admin User (only if not already there)
+const existingUsers = JSON.parse(localStorage.getItem("users")) || [];
+const adminExists = existingUsers.some(u => u.email === "admin@quiz.com");
+
+if (!adminExists) {
+  const admin = {
+    email: "admin@quiz.com",
+    password: "admin123",
+    name: "Admin",
+    familyname: "User",
+    scores: {}
+  };
+  existingUsers.push(admin);
+  localStorage.setItem("users", JSON.stringify(existingUsers));
 }
-const users =[];
-users.push(admin);
-localStorage.setItem("users", JSON.stringify(users));
-// JavaScript to toggle between the Login and Register forms
+
+// Toggle between Login and Register Forms
 function toggleForm(form) {
-    if (form === 'register') {
-        document.getElementById('login-form').style.display = 'none';
-        document.getElementById('register-form').style.display = 'block';
-    } else if (form === 'login') {
-        document.getElementById('login-form').style.display = 'block';
-        document.getElementById('register-form').style.display = 'none';
-    }
+  if (form === 'register') {
+    document.getElementById('login-form').style.display = 'none';
+    document.getElementById('register-form').style.display = 'block';
+  } else {
+    document.getElementById('login-form').style.display = 'block';
+    document.getElementById('register-form').style.display = 'none';
+  }
 }
 
-// Handling the login form submission
+// Login Handler
 const loginForm = document.getElementById("form-login");
-loginForm.addEventListener("submit", loginfunction);
+if (loginForm) {
+  loginForm.addEventListener("submit", function loginfunction(event) {
+    event.preventDefault();
 
-function loginfunction(event){
-    event.preventDefault();  // stop page reload
     const email = document.getElementById("login-email").value;
     const password = document.getElementById("login-password").value;
 
-    // Check for login as admin
-    if(email === "admin@quiz.com" && password === "admin123"){
-        alert("Log in success");
-        window.location.href = '../pages/dashboard.html'; // redirect to admin dashboard
-        return;
-    }
+    const users = JSON.parse(localStorage.getItem("users")) || [];
 
-    let userFound = false;
-    const users = JSON.parse(localStorage.getItem("users")) || [];  // fetch users from localStorage
+    const foundUser = users.find(user => user.email === email);
 
-    // Loop over users and check credentials
-    for (let i = 0; i < users.length; i++) {
-        if (users[i].email === email) {
-            userFound = true;
-            if (users[i].password === password) {
-                alert("Log in success");
-                const loggedinuser = users[i].email;
-                localStorage.setItem("loggedinuser", JSON.stringify(loggedinuser));
-                window.location.href = '../index.html'; // redirect to home page
-                return;
-            } else {
-                alert("Invalid password");
-            }
-        }
-    }
-    if (!userFound) {
-        alert("Email not found");
-    }
-}
-
-// Handling the register form submission
-const registerForm = document.getElementById('form-register');
-if (registerForm) {
-  registerForm.addEventListener('submit', function (e) {
-    e.preventDefault();  // Prevent form from submitting
-
-    const name = document.getElementById('register-name').value;
-    const familyname = document.getElementById('register-familyname').value;
-    const email = document.getElementById('register-email').value;
-    const password = document.getElementById('register-password').value;
-
-    // Check if email already exists
-    let users = JSON.parse(localStorage.getItem('users') || '[]');
-    if (users.some(user => user.email === email)) {
-      alert('This email is already registered!');
+    if (!foundUser) {
+      alert("Email not found");
       return;
     }
 
-    const newUser = { name, familyname, email, password, scores: [] };
+    if (foundUser.password !== password) {
+      alert("Invalid password");
+      return;
+    }
 
-    // Save the new user in localStorage
-    users.push(newUser);
-    localStorage.setItem('users', JSON.stringify(users));
+    // Store logged in user
+    localStorage.setItem("loggedinuser", JSON.stringify(foundUser));
 
-    alert('Registration successful! You can now log in.');
-    toggleForm('login');  // Switch to login form after registration
+    alert("Login successful!");
+
+    // Admin redirect
+    if (email === "admin@quiz.com") {
+      window.location.href = '../pages/dashboard.html';
+    } else {
+      window.location.href = '../index.html';
+    }
   });
 }
 
-// ===============================================================================
+//Register Handler
+const registerForm = document.getElementById("form-register");
+if (registerForm) {
+  registerForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("register-name").value;
+    const familyname = document.getElementById("register-familyname").value;
+    const email = document.getElementById("register-email").value;
+    const password = document.getElementById("register-password").value;
+
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+
+    if (users.some(user => user.email === email)) {
+      alert("This email is already registered!");
+      return;
+    }
+
+    const newUser = {
+      name,
+      familyname,
+      email,
+      password,
+      scores: {} // empty score record
+    };
+
+    users.push(newUser);
+    localStorage.setItem("users", JSON.stringify(users));
+
+    // Auto-login the new user
+    localStorage.setItem("loggedinuser", JSON.stringify(newUser));
+
+    alert("Registration successful! Redirecting...");
+    window.location.href = "../index.html"; // or any other homepage
+  });
+}
