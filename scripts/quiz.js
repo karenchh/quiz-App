@@ -99,7 +99,25 @@ const quiz5 = [
     }
   ];
 localStorage.setItem("quizn5", JSON.stringify(quiz5));
-  
+
+const quiz6 = [
+    {
+      question: "What does SQL stand for?",
+      options: ["Structured Query Language", "Simple Query Language", "Server Query Language"],
+      correctAnswer: "Structured Query Language"
+    },
+    {
+      question: "Which command is used to get data from a table?",
+      options: ["FETCH", "SELECT", "GET"],
+      correctAnswer: "SELECT"
+    },
+    {
+      question: "Which clause is used to filter results?",
+      options: ["ORDER", "WHERE", "LIMIT"],
+      correctAnswer: "WHERE"
+    }
+  ];
+localStorage.setItem("quizn6", JSON.stringify(quiz6));    
 
 const quiznumber = new URLSearchParams(window.location.search); // to bring it from the url
 const quizid = quiznumber.get("id");
