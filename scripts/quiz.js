@@ -62,6 +62,26 @@ const quiz3 = [
   ];
 localStorage.setItem("quizn3", JSON.stringify(quiz3));
   
+const quiz4 = [
+    {
+      question: "What does HTML stand for?",
+      options: ["HyperText Markup Language", "HighText Markdown Language", "Home Tool Markup Language"],
+      correctAnswer: "HyperText Markup Language"
+    },
+    {
+      question: "What tag is used to create a hyperlink?",
+      options: ["<a>", "<link>", "<href>"],
+      correctAnswer: "<a>"
+    },
+    {
+      question: "What tag is used to create a numbered list?",
+      options: ["<ul>", "<ol>", "<li>"],
+      correctAnswer: "<ol>"
+    }
+  ];
+localStorage.setItem("quizn4", JSON.stringify(quiz4));
+
+
 
 const quiznumber = new URLSearchParams(window.location.search); // to bring it from the url
 const quizid = quiznumber.get("id");
