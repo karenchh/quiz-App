@@ -3,24 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QuizApp</title>
-    <link rel="stylesheet" href="../styles/loginstyle.css">
+    <title>QuizApp - Authentication</title>
+    <link rel="stylesheet" href="../styles/authentication.css">
 </head>
 <body>
     <div class="outer-container">
-        <div class="login-container">
+        <div class="auth-container">
             <div class="inner-container">
-            <button class="login">Login Here</button>
-            <form class="login-form" id="form-login">
-                <input type="email" name="useremail" id="login-email" placeholder="Enter your email">
-                <input type="password" name="userpassword"id="login-password" placeholder="Enter your password">
-                <button type="submit" class="login-btn">Login</button>
-            </form>
-            <p class="par1">Don't have an account?<br/>
-            <a href="./signup.html">Register</a> here</p>
+                <!-- Toggle between Login and Register -->
+                <div id="login-form" class="auth-section">
+                    <h2>Login</h2>
+                    <form id="form-login">
+                        <input type="email" id="login-email" placeholder="Enter your email" required />
+                        <input type="password" id="login-password" placeholder="Enter your password" required />
+                        <button type="submit" class="auth-btn">Login</button>
+                    </form>
+                    <p class="par1">Don't have an account? <a href="#" onclick="toggleForm('register')">Register here</a></p>
+                </div>
+
+                <div id="register-form" class="auth-section" style="display: none;">
+                    <h2>Register</h2>
+                    <form id="form-register">
+                        <input type="text" id="register-name" placeholder="Enter your Name" required />
+                        <input type="text" id="register-familyname" placeholder="Enter your Lastname" required />
+                        <input type="email" id="register-email" placeholder="Enter your email" required />
+                        <input type="password" id="register-password" placeholder="Create a password" required />
+                        <button type="submit" class="auth-btn">Register</button>
+                    </form>
+                    <p class="par1">Already have an account? <a href="#" onclick="toggleForm('login')">Login here</a></p>
+                </div>
             </div>
         </div>
     </div>
-    <script src="../scripts/script.js"></script>
+    <script src="../scripts/scripts.js"></script>
 </body>
 </html>
