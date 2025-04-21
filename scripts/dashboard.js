@@ -16,4 +16,7 @@ for (let i = 0; i < users.length; i++) {
 
     const nameCell = document.createElement("td");
     nameCell.textContent = `${user.name} ${user.familyname}`;
+
+    const emailCell = document.createElement("td");
+    emailCell.textContent = user.email;
 }
