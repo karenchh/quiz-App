@@ -110,4 +110,12 @@ const quizzes = [
           link: '../pages/quiz.html?id=quiz-n3'
         }
       },
+      {
+        title: 'HTML',
+        description: 'Web page structure language',
+        button: {
+          text: 'Quiz',
+          link: '../pages/quiz.html?id=quiz-n4'
+        }
+      },
   ];
