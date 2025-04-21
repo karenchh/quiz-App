@@ -5,3 +5,11 @@ if (!loggedInUser || loggedInUser.email !== "admin@quiz.com") {
 }
 const users = JSON.parse(localStorage.getItem("users")) || [];
 const userList = document.getElementById("user-list");
+
+for (let i = 0; i < users.length; i++) {
+    const user = users[i];
+
+
+
+    
+}
