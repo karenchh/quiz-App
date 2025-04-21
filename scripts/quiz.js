@@ -68,14 +68,14 @@ const quiz4 = [
     correctAnswer: "HyperText Markup Language"
   },
   {
-    question: "What tag is used to create a hyperlink?",
-    options: ["<a>", "<link>", "<href>"],
-    correctAnswer: "<a>"
+    question: "Which attribute is used to provide alternative text for an image?",
+    options: ["alt", "title", "src"],
+    correctAnswer: "alt"
   },
   {
-    question: "What tag is used to create a numbered list?",
-    options: ["<ul>", "<ol>", "<li>"],
-    correctAnswer: "<ol>"
+    question: "Which attribute specifies the destination URL of a link?",
+    options: ["href", "src", "link"],
+    correctAnswer: "href"
   }
 ];
 localStorage.setItem("quizn4", JSON.stringify(quiz4));
