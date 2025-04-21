@@ -79,7 +79,7 @@ const quizzes = [
     quizdiv.appendChild(quizdescription);
     quizdiv.appendChild(quizbutton);
 
-    // Add quiz card to container
+    // Add quiz div to container
     quizlist.appendChild(quizdiv);
   }
 
