@@ -53,5 +53,6 @@ const quizzes = [
 
   localStorage.setItem('quizzes', JSON.stringify(quizzes));
   for (let i = 0; i < quizzes.length; i++) {
-    
+    const quiz = quizzes[i]; // save each quiz in quiz variable
+
     }
