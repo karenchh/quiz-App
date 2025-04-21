@@ -14,4 +14,6 @@ for (let i = 0; i < users.length; i++) {
     const indexCell = document.createElement("td"); // Creating data inside the table
     indexCell.textContent = i;
 
+    const nameCell = document.createElement("td");
+    nameCell.textContent = `${user.name} ${user.familyname}`;
 }
