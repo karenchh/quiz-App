@@ -10,7 +10,8 @@ const tableBody = document.getElementById("users-tbody");
 for (let i = 0; i < users.length; i++) {
     const user = users[i];
 
-
-
+    const row = document.createElement("tr");//creating each row in the body
+    const indexCell = document.createElement("td"); // Creating data inside the table
+    
 
 }
