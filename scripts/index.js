@@ -7,7 +7,7 @@ const quizzes = [
       description: 'Cross-platform programming language',
       button: {
         text: 'Quiz',
-        link: '../pages/quiz.html?id=quiz-n1'
+        link: '../pages/quiz.html?id=quizn1'
       } // ?id=quiz-n1 query parameter to pass it to the destination page to know in the next page which quiz is chosen
     },
     {
@@ -15,7 +15,7 @@ const quizzes = [
     description: 'Interactive web scripting language',
     button: {
       text: 'Quiz',
-      link: '../pages/quiz.html?id=quiz-n2'
+      link: '../pages/quiz.html?id=quizn2'
       }
     },
     {
@@ -23,7 +23,7 @@ const quizzes = [
         description: 'Easy, versatile coding language',
         button: {
           text: 'Quiz',
-          link: '../pages/quiz.html?id=quiz-n3'
+          link: '../pages/quiz.html?id=quizn3'
         }
     },
     {
@@ -31,7 +31,7 @@ const quizzes = [
         description: 'Web page structure language',
         button: {
           text: 'Quiz',
-          link: '../pages/quiz.html?id=quiz-n4'
+          link: '../pages/quiz.html?id=quizn4'
         }
     },
     {
@@ -39,7 +39,7 @@ const quizzes = [
         description: 'Styles and designs for web pages',
         button: {
           text: 'Quiz',
-          link: '../pages/quiz.html?id=quiz-n5'
+          link: '../pages/quiz.html?id=quizn5'
         }
     },
     {
@@ -47,7 +47,7 @@ const quizzes = [
         description: 'Database querying and management',
         button: {
           text: 'Quiz',
-          link: '../pages/quiz.html?id=quiz-n6'
+          link: '../pages/quiz.html?id=quizn6'
         }
     }
   ];
