@@ -81,3 +81,17 @@ if (registerForm) {
     toggleForm('login');  // Switch to login form after registration
   });
 }
+
+// ===============================================================================
+
+//index javascript
+const quizzes = [
+    {
+      title: 'Java',
+      description: 'Cross-platform programming language',
+      button: {
+        text: 'Quiz',
+        link: '../pages/quiz.html?id=quiz-n1'
+      } // ?id=quiz-n1 query parameter to pass it to the destination page to know in the next page which quiz is chosen
+    }
+  ];
