@@ -4,12 +4,13 @@ if (!loggedInUser || loggedInUser.email !== "admin@quiz.com") {
   window.location.href = "../pages/authentication.html";
 }
 const users = JSON.parse(localStorage.getItem("users")) || [];
-const userList = document.getElementById("user-list");
+const tableBody = document.getElementById("users-tbody");
+
 
 for (let i = 0; i < users.length; i++) {
     const user = users[i];
 
 
 
-    
+
 }
